@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="/css/Inicio.css">
+    <link rel="stylesheet" href="/css/productos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="/images/planta.png">
+    <script src="/js/proyecto.js"></script>
+</head>
+<body>
+    <header style="margin-bottom: 20px">
+        <div class="logo img-fluid">
+          <img class="imglogo" src="/images/planta.png" alt="logo" width="30px" height="30px">
+        </div>
+        <h1 id="greenlife">
+          <span class="greentit">Green</span>
+          <span>Life</span>
+        </h1>
+        <section class="nav">
+          <input type="checkbox" name="" id="chk1">
+          <div class="search-box">
+            <form action="">
+              <input type="text" name="search" id="srch" placeholder="Buscar" alt="Busqueda">
+              <button type="submit"> <i class="fa fa-search"></i></button>
+            </form>
+          </div>
+          <ul class="menu-list" id="menu-list">
+            <li><a th:href="@{/}">Inicio</a></li>
+            <li><a th:href="@{/Productos}">Productos</a></li>
+            <li><a href="#SobreNosotros">Sobre nosotros</a></li>
+            <li><a th:href="@{/login}">Acceso</a></li>
+          </ul>
+          <div class="menu">
+            <label for="chk1">
+              <i class="fa fa-bars" id="fabars"></i>
+            </label>
+          </div>
+        </section>
+    </header>
+    <main>
+      <section class="cards container d-flex justify-content-center">
+          <div class="row justify-content-center">
+              <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                  <div class="card h-100 d-flex flex-column card-img-top-wrapper">
+                      <img src="/images/monstera3.jpg" class="card-img-top" alt="Planta Monstera, hoja rota">
+                      <div class="card-body d-flex flex-column">
+                          <h5 class="card-title">Monstera Hoja Rota</h5>
+                          <p class="card-text">35.000$</p>
+                          <div class="mt-auto">
+                              <a href="#" class="btn btn-primary" style="background-color: rgb(119, 85, 47); border: solid black 0.1px;" alt="Comprar">Comprar</a>
+                              <a alt="Cuidado de la planta" class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1" style="background-color: rgb(119, 85, 47); border: solid black 0.1px;">
+                                  Cuidado
+                              </a>
+                          </div>
+                          <div class="collapse" id="collapseExample1">
+                              <div class="card card-body">
+                                  La Monstera Adansonii es una planta que prefiere la humedad alta, requiere mayor riego en verano y una alta iluminación pero nunca directamente del sol.
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="col-lg-3 col-md-4 col-sm-6 mb-3" id="tarjetas">
+                  <div class="card h-100 d-flex flex-column">
+                      <img src="/images/bonsai-manzano.jpg" class="card-img-top" alt="Planta Bonsai Manzano">
+                      <div class="card-body d-flex flex-column">
+                          <h5 class="card-title">Bonsai de Manzano</h5>
+                          <p class="card-text">100.000$</p>
+                          <div class="mt-auto">
+                              <a href="#" alt="Comprar" class="btn btn-primary" style="background-color: rgb(119, 85, 47); border: solid black 0.1px;">Comprar</a>
+                              <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2" style="background-color: rgb(119, 85, 47); border: solid black 0.1px;" alt="Cuidado de la planta">
+                                  Cuidado
+                              </a>
+                          </div>
+                          <div class="collapse" id="collapseExample2">
+                              <div class="card card-body">
+                                  El Bonsai de Manzano es una planta preferiblemente de exterior, no necesitan mucho riego en verano y nunca regar sobre la flor. Prefieren luz directa del sol y es necesario trasplantarse antes del brote.
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <div class="card h-100 d-flex flex-column">
+                    <img src="/images/begoniasemperflorens.jpg" class="card-img-top" alt="Planta Begonia Semperflorens">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Begonia Semperflorens</h5>
+                        <p class="card-text">30.000$</p>
+                        <div class="mt-auto">
+                            <a href="#" class="btn btn-primary" style="background-color: rgb(119, 85, 47); border: solid black 0.1px;" alt="Comprar">Comprar</a>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3" style="background-color: rgb(119, 85, 47); border: solid black 0.1px;" alt="Cuidado de la planta">
+                                Cuidado
+                            </a>
+                        </div>
+                        <div class="collapse" id="collapseExample3">
+                            <div class="card card-body">
+                                La Begonia Semperflorens es una planta de exterior, su riego no es abundante y se hace cada 4 o 5 días en verano, sin embargo, en invierno es preferible disminuir la cantidad.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <div class="card h-100 d-flex flex-column">
+                    <img src="/images/caladiumbicolor.webp" class="card-img-top" alt="Planta Caladium Bicolor">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Caladium Bicolor</h5>
+                        <p class="card-text">80.000$</p>
+                        <div class="mt-auto">
+                            <a href="#" class="btn btn-primary" style="background-color: rgb(119, 85, 47); border: solid black 0.1px;" alt="Comprar">Comprar</a>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4" style="background-color: rgb(119, 85, 47); border: solid black 0.1px;" alt="Cuidado de la planta">
+                                Cuidado
+                            </a>
+                        </div>
+                        <div class="collapse" id="collapseExample4">
+                            <div class="card card-body">
+                                La Caladium Bicolor es una planta tropical que prefiere la luz indirecta, debe mantener su sustrato húmedo por lo que el riego es constante pero sin encharcamiento, además, no tolera temperaturas frías.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                  <div class="card h-100 d-flex flex-column">
+                      <img src="/images/rosagoldencelebration.jpg" class="card-img-top" alt="Planta Rosa Golden Celebration">
+                      <div class="card-body d-flex flex-column">
+                          <h5 class="card-title">Rosa Golden Celebration</h5>
+                          <p class="card-text">35.000$</p>
+                          <div class="mt-auto">
+                              <a href="#" class="btn btn-primary" style="background-color: rgb(119, 85, 47); border: solid black 0.1px;" alt="Comprar">Comprar</a>
+                              <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5" style="background-color: rgb(119, 85, 47); border: solid black 0.1px;" alt="Cuidado de la planta">
+                                  Cuidado
+                              </a>
+                          </div>
+                          <div class="collapse" id="collapseExample5">
+                              <div class="card card-body">
+                                  La Rosa Golden Celebration es una planta que prefiere la humedad alta, requiere mayor riego en verano y una alta iluminación pero nunca directamente del sol.
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                  <div class="card h-100 d-flex flex-column">
+                      <img src="/images/anturio.jpg" class="card-img-top" alt="Planta Anturio Holandés">
+                      <div class="card-body d-flex flex-column">
+                          <h5 class="card-title">Anturio Holandés</h5>
+                          <p class="card-text">180.000$</p>
+                          <div class="mt-auto">
+                              <a href="#" class="btn btn-primary" style="background-color: rgb(119, 85, 47); border: solid black 0.1px;" alt="Comprar">Comprar</a>
+                              <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample6" style="background-color: rgb(119, 85, 47); border: solid black 0.1px;" alt="Cuidado de la planta">
+                                  Cuidado
+                              </a>
+                          </div>
+                          <div class="collapse" id="collapseExample6">
+                              <div class="card card-body">
+                                  <p>El Anturio Holandés es una planta que ama las temperaturas cálidas y constantes, también los ambientes húmedos y la luz indirecta. Mantén el sustrato húmedo, riega cuando su superficie esté seca.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            
+          </section>
+      </main>
+
+      <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3>Green<span>Life</span></h3>
+            <p class="footer-links">
+                <a th:href="@{/}">Inicio</a> |
+                <a th:href="@{Productos}">Productos</a> |
+                <a href="#SobreNosotros">Sobre Nosotros</a> |
+                <a th:href="@{/login}">Acceso</a>
+            </p>
+            <p class="footer-company-name">Copyright © 2024 <strong>SagarDeveloper</strong> All rights reserved</p>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Neiva</span> Colombia</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+57 3053108520</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:Greenlife@gmail.com">Greenlife@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about" id="SobreNosotros">
+                <span>Sobre nosotros</span>
+                <strong>GreenLife</strong> nació de la pasión por la naturaleza y el deseo de compartir los beneficios de tener plantas con todos. Nuestra misión es hacer que la jardinería sea accesible y gratificante para todos, desde los principiantes hasta los jardineros experimentados.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                    </svg>
+                </i></a>
+                <a href="#"><i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                    </svg>
+                </i></a>
+            </div>
+        </div>
+      </footer>
+      </main>
+        
+      
+      
+      </body>
+      
+      </html>
+      
+              
+            
+              
+          
+      
+  
+
